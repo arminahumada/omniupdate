@@ -6,7 +6,8 @@ Implementation of OmniUpdate skills assessment with Spring Boot and the followin
 * H2 embeded database - implementation is rdms agnostic
 * Liquibase based schema creation - See below or `src/main/resources/dbchangelog.xml`
 * Test data with 500 - Test data loads with app and integration tests (`src/main/resources/us-500.csv`)
-* Sample api calls with Postman - `OmniUpdate Assesment.postman_collection.json` 
+* Sample api calls with Postman - `OmniUpdate Assesment.postman_collection.json` See [Postman Docs](https://documenter.getpostman.com/view/4160758/TVRrUjJo) 
+
 
 ## Schema Design
 
@@ -35,6 +36,6 @@ Implementation of OmniUpdate skills assessment with Spring Boot and the followin
 
 ## Run App
 
-```$mvn springboot:run```
+```$mvn spring-boot:run```
 
 
