@@ -1,7 +1,7 @@
 # OmniUpdate - SOFTWARE DEVELOPER SKILLS ASSESSMENT
 
 Implementation of OmniUpdate skills assessment with Spring Boot and the following:
-* Spring Boot / Data
+* Spring Boot Web / Data
 * JPA / Hibernate
 * H2 embeded database - implementation is rdbms agnostic
 * Liquibase based schema creation - See below or [src/main/resources/dbchangelog.xml](./src/main/resources/dbchangelog.xml)
