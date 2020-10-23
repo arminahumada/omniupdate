@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "1fee9e71-ebda-4b1f-813e-0521628f3a92",
+		"name": "OmniUpdate Assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Simple List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/contacts",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Simple Get",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/contacts/100",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"contacts",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Invalid Contact",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/contacts/999",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"contacts",
+						"999"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search with filters",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/contacts?filter=firstName:b&filter=lastName:b",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "filter",
+							"value": "firstName:b"
+						},
+						{
+							"key": "filter",
+							"value": "lastName:b",
+							"description": "b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page with sort",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/contacts?page=1&size=10&sort=lastName,desc",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "lastName,desc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Page with Sort and Filter",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/contacts?page=1&size=10&sort=lastName,desc&filter=lastName:b",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "lastName,desc"
+						},
+						{
+							"key": "filter",
+							"value": "lastName:b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Simple Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Armin\",\n    \"lastName\": \"Ahumada\",\n    \"phoneNumber\": \"123-456-788\",\n    \"address\": \"123 xys st \\n San Diego, CA 90214\",\n    \"email\": \"email@address.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{rootUrl}}/contacts",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Simple Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Armin\",\n    \"lastName\": \"Ahumada\",\n    \"phoneNumber\": \"321-111-1111\",\n    \"address\": \"123 xys st \\n San Diego, CA 90214\",\n    \"email\": \"email@address.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{rootUrl}}/contacts/200",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"contacts",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstName\": \"Armin\",\n    \"phoneNumber\": \"123-456-788\",\n    \"address\": \"123 xys st \\n San Diego, CA 90214\",\n    \"email\": \"email@address.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{rootUrl}}/contacts",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Simple Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/contacts/200",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"contacts",
+						"200"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{rootUrl}}/contacts/10000",
+					"host": [
+						"{{rootUrl}}"
+					],
+					"path": [
+						"contacts",
+						"10000"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"id": "1ae89201-d70b-4cb5-804b-92d8d6bf57a6",
+			"key": "rootUrl",
+			"value": "http://localhost:8080/api/v1"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
