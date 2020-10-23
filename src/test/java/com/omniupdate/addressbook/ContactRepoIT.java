@@ -53,8 +53,4 @@ public class ContactRepoIT {
 
     }
 
-    public void testSort_thenReturnCorrectOrder() {
-
-
-    }
 }
